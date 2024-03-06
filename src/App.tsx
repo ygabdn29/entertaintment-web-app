@@ -1,12 +1,12 @@
-import { useState } from "react";
+import Dashboard from "./pages/Dashboard";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
-    <>
-      <h1 className="font-outfit">Hello Jamal</h1>
-    </>
+    <div className="grid place-content-center">
+      <main className="max-w-[90rem]">
+        <Dashboard></Dashboard>
+      </main>
+    </div>
   );
 }
 

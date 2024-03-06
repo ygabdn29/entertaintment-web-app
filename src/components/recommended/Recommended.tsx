@@ -1,0 +1,153 @@
+import MovieCard from "../movieCard/MovieCard";
+import data from "../../../data/data.json";
+
+function Recommended() {
+  return (
+    <div>
+      <h2 className="text-white text-3.5xl mb-8">Recommended for you</h2>
+      <div className="grid grid-cols-4 gap-x-10 gap-y-8">
+        {data.map((data, i) => (
+          <MovieCard movie={data} key={i}></MovieCard>
+        ))}
+
+        {/* <img
+          src="src\assets\thumbnails\beyond-earth\trending\large.jpg"
+          alt=""
+          className=""
+        />
+        <img
+          src="src\assets\thumbnails\beyond-earth\trending\large.jpg"
+          alt=""
+          className=""
+        />
+        <img
+          src="src\assets\thumbnails\beyond-earth\trending\large.jpg"
+          alt=""
+          className=""
+        />
+        <img
+          src="src\assets\thumbnails\beyond-earth\trending\large.jpg"
+          alt=""
+          className=""
+        />
+        <img
+          src="src\assets\thumbnails\beyond-earth\trending\large.jpg"
+          alt=""
+          className=""
+        />
+        <img
+          src="src\assets\thumbnails\beyond-earth\trending\large.jpg"
+          alt=""
+          className=""
+        />
+        <img
+          src="src\assets\thumbnails\beyond-earth\trending\large.jpg"
+          alt=""
+          className=""
+        />
+        <img
+          src="src\assets\thumbnails\beyond-earth\trending\large.jpg"
+          alt=""
+          className=""
+        />
+        <img
+          src="src\assets\thumbnails\beyond-earth\trending\large.jpg"
+          alt=""
+          className=""
+        />
+        <img
+          src="src\assets\thumbnails\beyond-earth\trending\large.jpg"
+          alt=""
+          className=""
+        />
+        <img
+          src="src\assets\thumbnails\beyond-earth\trending\large.jpg"
+          alt=""
+          className=""
+        />
+        <img
+          src="src\assets\thumbnails\beyond-earth\trending\large.jpg"
+          alt=""
+          className=""
+        />
+        <img
+          src="src\assets\thumbnails\beyond-earth\trending\large.jpg"
+          alt=""
+          className=""
+        />
+        <img
+          src="src\assets\thumbnails\beyond-earth\trending\large.jpg"
+          alt=""
+          className=""
+        />
+        <img
+          src="src\assets\thumbnails\beyond-earth\trending\large.jpg"
+          alt=""
+          className=""
+        />
+        <img
+          src="src\assets\thumbnails\beyond-earth\trending\large.jpg"
+          alt=""
+          className=""
+        />
+        <img
+          src="src\assets\thumbnails\beyond-earth\trending\large.jpg"
+          alt=""
+          className=""
+        />
+        <img
+          src="src\assets\thumbnails\beyond-earth\trending\large.jpg"
+          alt=""
+          className=""
+        />
+        <img
+          src="src\assets\thumbnails\beyond-earth\trending\large.jpg"
+          alt=""
+          className=""
+        />
+        <img
+          src="src\assets\thumbnails\beyond-earth\trending\large.jpg"
+          alt=""
+          className=""
+        />
+        <img
+          src="src\assets\thumbnails\beyond-earth\trending\large.jpg"
+          alt=""
+          className=""
+        />
+        <img
+          src="src\assets\thumbnails\beyond-earth\trending\large.jpg"
+          alt=""
+          className=""
+        />
+        <img
+          src="src\assets\thumbnails\beyond-earth\trending\large.jpg"
+          alt=""
+          className=""
+        />
+        <img
+          src="src\assets\thumbnails\beyond-earth\trending\large.jpg"
+          alt=""
+          className=""
+        />
+        <img
+          src="src\assets\thumbnails\beyond-earth\trending\large.jpg"
+          alt=""
+          className=""
+        />
+        <img
+          src="src\assets\thumbnails\beyond-earth\trending\large.jpg"
+          alt=""
+          className=""
+        />
+        <img
+          src="src\assets\thumbnails\beyond-earth\trending\large.jpg"
+          alt=""
+          className=""
+        /> */}
+      </div>
+    </div>
+  );
+}
+
+export default Recommended;
