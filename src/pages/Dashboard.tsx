@@ -1,7 +1,6 @@
-import Recommended from "../components/recommended/Recommended";
 import Search from "../components/search/Search";
 import Sidebar from "../components/sidebar/Sidebar";
-import Trending from "../components/trending/Trending";
+import Homepage from "./homepage/Homepage";
 
 function Dashboard() {
   return (
@@ -10,8 +9,7 @@ function Dashboard() {
 
       <div>
         <Search></Search>
-        <Trending></Trending>
-        <Recommended></Recommended>
+        <Homepage></Homepage>
       </div>
     </div>
   );
