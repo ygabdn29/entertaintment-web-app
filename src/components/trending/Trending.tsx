@@ -8,10 +8,10 @@ function Trending() {
       <div className="mb-10 overflow-x-auto w-[77.5rem]">
         <div className="grid grid-cols-trending gap-10">
           <TrendingCard></TrendingCard>
+          {/* <TrendingCard></TrendingCard>
           <TrendingCard></TrendingCard>
           <TrendingCard></TrendingCard>
-          <TrendingCard></TrendingCard>
-          <TrendingCard></TrendingCard>
+          <TrendingCard></TrendingCard> */}
         </div>
       </div>
     </>

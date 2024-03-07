@@ -1,10 +1,20 @@
-import { FC } from "react";
+interface Type {
+  small?: string;
+  medium?: string;
+  large: string;
+}
+
+interface Thumbnail {
+  trending?: Type;
+  regular: Type;
+}
 
 interface MovieDetail {
   title: string;
   year: number;
   category: string;
-  thumbnail: object;
+
+  thumbnail: Thumbnail;
   rating: string;
 }
 
