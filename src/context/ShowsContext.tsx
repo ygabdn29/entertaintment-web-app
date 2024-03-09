@@ -28,6 +28,8 @@ import data from "../../data/data.json";
 interface ShowsContext {
   getTrendingShows: () => any[]; // eslint-disable-line
   getRegularShows: () => any[]; // eslint-disable-line
+  getMovieShows: () => any[]; // eslint-disable-line
+  getTvSeries: () => any[]; // eslint-disable-line
 }
 
 const ShowsContext = createContext<ShowsContext | null>(null);
@@ -49,8 +51,24 @@ function ShowsProvider({ children }: ShowProviderProps) {
     return regularShows;
   }
 
+  function getMovieShows() {
+    const movieShows = data.filter((currData) => currData.category === "Movie");
+
+    return movieShows;
+  }
+
+  function getTvSeries() {
+    const tvSeries = data.filter(
+      (currData) => currData.category === "TV Series"
+    );
+
+    return tvSeries;
+  }
+
   return (
-    <ShowsContext.Provider value={{ getTrendingShows, getRegularShows }}>
+    <ShowsContext.Provider
+      value={{ getTrendingShows, getRegularShows, getMovieShows, getTvSeries }}
+    >
       {children}
     </ShowsContext.Provider>
   );
