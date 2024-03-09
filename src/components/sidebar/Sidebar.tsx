@@ -50,7 +50,7 @@ function Sidebar() {
 
             <li className="text-white">
               <NavLink
-                to="tv-shows"
+                to="tv-series"
                 className={({ isActive }) =>
                   isActive
                     ? "text-white transition-all duration-300"
