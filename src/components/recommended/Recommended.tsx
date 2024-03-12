@@ -1,5 +1,5 @@
 import { useShows } from "../../utilities/UseShows";
-import MovieCard from "../movieCard/MovieCard";
+import ShowCard from "../showCard/ShowCard";
 
 function Recommended() {
   const { getRegularShows } = useShows();
@@ -10,7 +10,7 @@ function Recommended() {
       <h2 className="text-white text-3.5xl mb-8">Recommended for you</h2>
       <div className="grid grid-cols-4 gap-x-10 gap-y-8">
         {regularShow.map((show, i) => (
-          <MovieCard show={show} key={i}></MovieCard>
+          <ShowCard show={show} key={i}></ShowCard>
         ))}
       </div>
     </div>

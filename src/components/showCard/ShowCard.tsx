@@ -22,7 +22,7 @@ interface ShowDetailProps {
   show: ShowDetail;
 }
 
-function MovieCard({ show }: ShowDetailProps) {
+function ShowCard({ show }: ShowDetailProps) {
   return (
     <div>
       <img
@@ -52,4 +52,4 @@ function MovieCard({ show }: ShowDetailProps) {
   );
 }
 
-export default MovieCard;
+export default ShowCard;

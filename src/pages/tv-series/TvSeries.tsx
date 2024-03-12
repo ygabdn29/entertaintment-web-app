@@ -1,4 +1,4 @@
-import MovieCard from "../../components/movieCard/MovieCard";
+import ShowCard from "../../components/showCard/ShowCard";
 import { useShows } from "../../utilities/UseShows";
 
 function TvSeries() {
@@ -10,7 +10,7 @@ function TvSeries() {
       <h2 className="text-white text-3.5xl mb-[2.375rem]">TV Series</h2>
       <div className="grid grid-cols-4 gap-x-10 gap-y-8 pb-14">
         {tvSeries.map((show, i) => (
-          <MovieCard show={show} key={i}></MovieCard>
+          <ShowCard show={show} key={i}></ShowCard>
         ))}
       </div>
     </div>

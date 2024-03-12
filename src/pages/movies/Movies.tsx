@@ -1,4 +1,4 @@
-import MovieCard from "../../components/movieCard/MovieCard";
+import MovieCard from "../../components/showCard/ShowCard";
 import { useShows } from "../../utilities/UseShows";
 
 function Movies() {
