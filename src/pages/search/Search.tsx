@@ -1,4 +1,4 @@
-function searchResult() {
+function Search() {
   return (
     <div>
       <h1 className="text-white">Search Result</h1>
@@ -6,4 +6,4 @@ function searchResult() {
   );
 }
 
-export default searchResult;
+export default Search;

@@ -11,6 +11,8 @@ import Movies from "./pages/movies/Movies";
 import Homepage from "./pages/homepage/Homepage";
 import TvSeries from "./pages/tv-series/TvSeries";
 import Bookmarked from "./pages/bookmarked/Bookmarked";
+import Search from "./pages/search/Search";
+import SearchResult from "./components/searchResult/SearchResult";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -20,6 +22,11 @@ const router = createBrowserRouter(
       <Route path="movies" element={<Movies />}></Route>
       <Route path="tv-series" element={<TvSeries />}></Route>
       <Route path="bookmarks" element={<Bookmarked />}></Route>
+
+      <Route path="search">
+        <Route index element={<Search></Search>}></Route>
+        <Route path=":search" element={<SearchResult></SearchResult>}></Route>
+      </Route>
     </Route>
   )
 );

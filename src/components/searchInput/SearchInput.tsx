@@ -1,4 +1,15 @@
-function Search() {
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+
+function SearchInput() {
+  const [search, setSearch] = useState("");
+  const navigate = useNavigate();
+
+  function handleSearch(searchTerms: string) {
+    setSearch(searchTerms);
+    navigate(`/search/${searchTerms}`);
+  }
+
   return (
     <div className="flex items-center gap-6 mt-8 mb-[2.125rem]">
       <div className="py-3.5">
@@ -17,9 +28,14 @@ function Search() {
         aria-label="Search movies or TV series"
         placeholder="Search for movies or TV Series"
         className="w-full text-2xl text-white py-3.5 outline-0 border border-t-transparent border-r-transparent border-l-transparent border-b-transparent bg-transparent transition-all duration-300 placeholder: opacity-50 focus:border-b-white"
+        onChange={(e) => {
+          e.preventDefault();
+          handleSearch(e.target.value);
+        }}
+        value={search}
       />
     </div>
   );
 }
 
-export default Search;
+export default SearchInput;
