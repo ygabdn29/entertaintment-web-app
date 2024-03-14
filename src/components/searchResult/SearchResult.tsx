@@ -10,7 +10,7 @@ function SearchResult() {
   return (
     <div>
       <h2 className="text-white text-3.5xl mb-8">
-        Search Result for {`${search}`}
+        Search Result for {`"${search}"`}
       </h2>
 
       <div className="grid grid-cols-4 gap-x-10 gap-y-8">

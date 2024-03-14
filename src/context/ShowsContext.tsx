@@ -42,7 +42,7 @@ function ShowsProvider({ children }: ShowProviderProps) {
     return tvSeries;
   }
 
-  function searchShows(search: string) {
+  function searchShows(search: string = "") {
     const searchedShows = data.filter((data) =>
       data.title.toLowerCase().includes(search.toLowerCase())
     );
