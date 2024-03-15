@@ -1,5 +1,5 @@
 import { Outlet } from "react-router-dom";
-import Search from "../components/search/Search";
+import SearchInput from "../components/searchInput/SearchInput";
 import Sidebar from "../components/sidebar/Sidebar";
 
 function Dashboard() {
@@ -8,7 +8,7 @@ function Dashboard() {
       <Sidebar></Sidebar>
 
       <main>
-        <Search></Search>
+        <SearchInput></SearchInput>
         <Outlet></Outlet>
       </main>
     </div>

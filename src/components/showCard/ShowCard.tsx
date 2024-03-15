@@ -22,15 +22,14 @@ interface ShowDetailProps {
   show: ShowDetail;
 }
 
-function MovieCard({ show }: ShowDetailProps) {
+function ShowCard({ show }: ShowDetailProps) {
   return (
     <div>
       <img
-        src={`src/${show.thumbnail.regular.large.slice(2)}`}
+        src={`${show.thumbnail.regular.large.slice(2)}`}
         alt=""
         className="w-[17.5rem] h-[10.875rem] rounded-lg mb-2"
       />
-
       <div className="flex gap-1 mb-1">
         <p className="text-white opacity-75 font-light text-[13px]">
           {show.year}
@@ -46,10 +45,9 @@ function MovieCard({ show }: ShowDetailProps) {
           {show.rating}
         </p>
       </div>
-
       <p className="text-white font-medium text-lg">{show.title}</p>
     </div>
   );
 }
 
-export default MovieCard;
+export default ShowCard;
