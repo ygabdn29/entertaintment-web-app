@@ -7,6 +7,9 @@ function SearchInput() {
 
   function handleSearch(searchTerms: string) {
     setSearch(searchTerms);
+
+    if (search === "") navigate("/");
+
     navigate(`/search/${searchTerms}`);
   }
 

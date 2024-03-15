@@ -1,11 +1,12 @@
 import { useParams } from "react-router-dom";
 import { useShows } from "../../utilities/UseShows";
 import ShowCard from "../showCard/ShowCard";
+import { useEffect, useState } from "react";
 
 function SearchResult() {
   const { search } = useParams();
   const { searchShows } = useShows();
-  const searchedShows = searchShows(search);
+  const searchResult = searchShows(search);
 
   return (
     <div>
@@ -14,8 +15,8 @@ function SearchResult() {
       </h2>
 
       <div className="grid grid-cols-4 gap-x-10 gap-y-8">
-        {searchedShows.map((show, i) => (
-          <ShowCard show={show} key={i}></ShowCard>
+        {searchResult.map((show) => (
+          <ShowCard show={show} key={show.title}></ShowCard>
         ))}
       </div>
     </div>
