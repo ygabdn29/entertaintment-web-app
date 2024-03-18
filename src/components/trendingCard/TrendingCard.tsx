@@ -26,7 +26,7 @@ function TrendingCard({ show }: ShowDetailProps) {
   return (
     <div className="relative">
       <img
-        src={`src/${show.thumbnail.trending?.large.slice(2)}`}
+        src={`${show.thumbnail.trending?.large.slice(2)}`}
         alt=""
         className="w-full rounded-lg"
       />
