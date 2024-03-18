@@ -1,17 +1,14 @@
-import { useParams } from "react-router-dom";
 import { useShows } from "../../utilities/UseShows";
 import ShowCard from "../showCard/ShowCard";
-import { useEffect, useState } from "react";
 
-function SearchResult() {
-  const { search } = useParams();
+function SearchResult({ searchTerms }) {
   const { searchShows } = useShows();
-  const searchResult = searchShows(search);
+  const searchResult = searchShows(searchTerms);
 
   return (
     <div>
       <h2 className="text-white text-3.5xl mb-8">
-        Search Result for {`"${search}"`}
+        Search Result for {`"${searchTerms}"`}
       </h2>
 
       <div className="grid grid-cols-4 gap-x-10 gap-y-8">
