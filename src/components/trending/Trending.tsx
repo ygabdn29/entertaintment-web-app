@@ -1,7 +1,8 @@
+import { memo } from "react";
 import { useShows } from "../../utilities/UseShows";
 import TrendingCard from "../trendingCard/TrendingCard";
 
-function Trending() {
+const Trending = memo(function Trending() {
   const { getTrendingShows } = useShows();
   const trendingShows = getTrendingShows();
 
@@ -18,6 +19,6 @@ function Trending() {
       </div>
     </>
   );
-}
+});
 
 export default Trending;

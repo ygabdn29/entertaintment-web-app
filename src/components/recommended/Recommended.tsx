@@ -1,7 +1,8 @@
+import { memo } from "react";
 import { useShows } from "../../utilities/UseShows";
 import ShowCard from "../showCard/ShowCard";
 
-function Recommended() {
+const Recommended = memo(function Recommended() {
   const { getRegularShows } = useShows();
   const regularShow = getRegularShows();
 
@@ -15,6 +16,6 @@ function Recommended() {
       </div>
     </div>
   );
-}
+});
 
 export default Recommended;
