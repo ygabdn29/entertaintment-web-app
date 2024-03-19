@@ -18,7 +18,7 @@ function Sidebar() {
                 className={({ isActive }) =>
                   isActive
                     ? "text-white transition-all duration-300"
-                    : "text-light-blue hover:text-dark-red"
+                    : "text-light-blue hover:text-dark-red transition-all duration-300"
                 }
               >
                 <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5">
@@ -36,7 +36,7 @@ function Sidebar() {
                 className={({ isActive }) =>
                   isActive
                     ? "text-white transition-all duration-300"
-                    : "text-light-blue hover:text-dark-red"
+                    : "text-light-blue hover:text-dark-red transition-all duration-300"
                 }
               >
                 <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5">
@@ -54,7 +54,7 @@ function Sidebar() {
                 className={({ isActive }) =>
                   isActive
                     ? "text-white transition-all duration-300"
-                    : "text-light-blue hover:text-dark-red"
+                    : "text-light-blue hover:text-dark-red transition-all duration-300"
                 }
               >
                 <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5">
@@ -72,7 +72,7 @@ function Sidebar() {
                 className={({ isActive }) =>
                   isActive
                     ? "text-white transition-all duration-300"
-                    : "text-light-blue hover:text-dark-red"
+                    : "text-light-blue hover:text-dark-red transition-all duration-300"
                 }
               >
                 <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5">
