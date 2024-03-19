@@ -53,6 +53,7 @@ function TrendingCard({ show }: ShowDetailProps) {
 
         <p className="text-white font-medium text-lg"> {show.title}</p>
       </div>
+
       <div className="grid place-content-center w-8 h-8 absolute top-4 right-6 bg-dark-blue rounded-full">
         <img src="src\assets\icon-bookmark-empty.svg" alt="" className="" />
       </div>
