@@ -25,11 +25,24 @@ interface ShowDetailProps {
 function TrendingCard({ show }: ShowDetailProps) {
   return (
     <div className="relative">
-      <img
-        src={`${show.thumbnail.trending?.large.slice(2)}`}
-        alt=""
-        className="w-full rounded-lg"
-      />
+      <div className="relative">
+        <img
+          src={`${show.thumbnail.trending?.large.slice(2)}`}
+          alt=""
+          className="w-full rounded-lg"
+        />
+        <div className="absolute grid place-content-center gap-5 w-full h-full top-0 opacity-0 bg-darker-blue/50 transition-all duration-300 hover:opacity-100">
+          <button className="flex gap-5 items-center justify-center w-[120px] h-12 text-white bg-white/40 rounded-full ">
+            <img
+              src="src\assets\icon-play.svg"
+              alt=""
+              className="h-[30px] w-[30px]"
+            />
+            <span className="">Play</span>
+          </button>
+        </div>
+      </div>
+
       <div className="flex flex-col absolute bottom-6 left-6">
         <div className="flex gap-1">
           <p className="text-white opacity-75 font-light text-[13px]">
