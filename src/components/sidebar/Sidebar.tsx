@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 function Sidebar() {
   return (
     <header className="max-h-240 h-240 max-w-24 w-full">
-      <nav className="flex flex-col justify-between items-center h-full bg-dark-blue py-8 px-7 rounded-[20px] ">
+      <nav className="flex flex-col justify-between items-center h-full bg-dark-blue py-8 px-7 rounded-[20px]">
         <div>
           <img
             src="../../src/assets/logo.svg"
@@ -18,7 +18,7 @@ function Sidebar() {
                 className={({ isActive }) =>
                   isActive
                     ? "text-white transition-all duration-300"
-                    : "text-light-blue"
+                    : "text-light-blue hover:text-dark-red"
                 }
               >
                 <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5">
@@ -36,7 +36,7 @@ function Sidebar() {
                 className={({ isActive }) =>
                   isActive
                     ? "text-white transition-all duration-300"
-                    : "text-light-blue"
+                    : "text-light-blue hover:text-dark-red"
                 }
               >
                 <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5">
@@ -54,7 +54,7 @@ function Sidebar() {
                 className={({ isActive }) =>
                   isActive
                     ? "text-white transition-all duration-300"
-                    : "text-light-blue"
+                    : "text-light-blue hover:text-dark-red"
                 }
               >
                 <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5">
@@ -72,7 +72,7 @@ function Sidebar() {
                 className={({ isActive }) =>
                   isActive
                     ? "text-white transition-all duration-300"
-                    : "text-light-blue"
+                    : "text-light-blue hover:text-dark-red"
                 }
               >
                 <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5">
