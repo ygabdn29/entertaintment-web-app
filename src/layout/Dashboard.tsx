@@ -3,6 +3,7 @@ import SearchInput from "../components/searchInput/SearchInput";
 import Sidebar from "../components/sidebar/Sidebar";
 import { useState } from "react";
 import SearchResult from "../components/searchResult/SearchResult";
+import { useLocalStorage } from "../hooks/UseLocalStorage";
 
 function Dashboard() {
   const [search, setSearch] = useState("");

@@ -1,5 +1,6 @@
 import { ReactNode, createContext } from "react";
 import data from "../../data/data.json";
+import { useLocalStorage } from "../hooks/UseLocalStorage";
 
 interface ShowsContext {
   getTrendingShows: () => any[]; // eslint-disable-line
@@ -7,15 +8,19 @@ interface ShowsContext {
   getMovieShows: () => any[]; // eslint-disable-line
   getTvSeries: () => any[]; // eslint-disable-line
   searchShows: (search: string) => any[]; // eslint-disable-line
+  bookmarked: any; // eslint-disable-line
+  setBookmarked: () => any[]; // eslint-disable-line
 }
-
-const ShowsContext = createContext<ShowsContext | null>(null);
 
 interface ShowProviderProps {
   children: ReactNode;
 }
 
+const ShowsContext = createContext<ShowsContext | null>(null);
+
 function ShowsProvider({ children }: ShowProviderProps) {
+  const [bookmarked, setBookmarked] = useLocalStorage([], "bookmarked");
+
   function getTrendingShows() {
     const trendingMovies = data.filter((currData) => currData.isTrending);
 
@@ -50,6 +55,10 @@ function ShowsProvider({ children }: ShowProviderProps) {
     return searchedShows;
   }
 
+  function handleNewBookmark(show) {
+    setBookmarked((bookmarked) => [...bookmarked, show]);
+  }
+
   return (
     <ShowsContext.Provider
       value={{
@@ -58,6 +67,8 @@ function ShowsProvider({ children }: ShowProviderProps) {
         getMovieShows,
         getTvSeries,
         searchShows,
+        bookmarked,
+        setBookmarked,
       }}
     >
       {children}

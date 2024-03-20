@@ -62,16 +62,19 @@ function ShowCard({ show }: ShowDetailProps) {
 
       <p className="text-white font-medium text-lg">{show.title}</p>
 
-      <div className="grid place-content-center w-8 h-8 absolute top-4 right-4 bg-dark-blue text-white rounded-full transition-all duration-300 hover:bg-white hover:text-darker-blue">
+      <button
+        className="grid place-content-center w-8 h-8 absolute top-4 right-4 bg-dark-blue text-white rounded-full transition-all duration-300 hover:bg-white hover:text-darker-blue"
+        onClick={() => console.log("test")}
+      >
         <svg xmlns="http://www.w3.org/2000/svg" className="w-3 h-[14px] ">
           <path
             d="m10.518.75.399 12.214-5.084-4.24-4.535 4.426L.75 1.036l9.768-.285Z"
             stroke="currentColor"
-            stroke-width="1.5"
+            strokeWidth="1.5"
             fill="none"
           />
         </svg>
-      </div>
+      </button>
     </div>
   );
 }
