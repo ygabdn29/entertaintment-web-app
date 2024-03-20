@@ -74,7 +74,9 @@ function ShowCard({ show }: ShowDetailProps) {
       )} */}
 
       <button
-        className="grid place-content-center w-8 h-8 absolute top-4 right-4 bg-dark-blue text-white rounded-full transition-all duration-300 hover:bg-white hover:text-darker-blue"
+        className={`grid place-content-center w-8 h-8 absolute top-4 right-4 bg-dark-blue text-white ${
+          show.isBookmarked ? "fill-white" : "fill-none"
+        } rounded-full transition-all duration-300 hover:bg-white hover:text-darker-blue`}
         onClick={() => handleNewBookmark(show)}
       >
         <svg xmlns="http://www.w3.org/2000/svg" className="w-3 h-[14px] ">
@@ -82,7 +84,7 @@ function ShowCard({ show }: ShowDetailProps) {
             d="m10.518.75.399 12.214-5.084-4.24-4.535 4.426L.75 1.036l9.768-.285Z"
             stroke="currentColor"
             strokeWidth="1.5"
-            fill="none"
+            fill="currentFill"
           />
         </svg>
       </button>
