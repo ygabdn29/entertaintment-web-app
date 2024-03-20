@@ -67,6 +67,12 @@ function ShowCard({ show }: ShowDetailProps) {
 
       <p className="text-white font-medium text-lg">{show.title}</p>
 
+      {/* {show.isBookmarked ? (
+        <h2 className="text-white">Bookmark</h2>
+      ) : (
+        <h2 className="text-white">Not bookmark</h2>
+      )} */}
+
       <button
         className="grid place-content-center w-8 h-8 absolute top-4 right-4 bg-dark-blue text-white rounded-full transition-all duration-300 hover:bg-white hover:text-darker-blue"
         onClick={() => handleNewBookmark(show)}

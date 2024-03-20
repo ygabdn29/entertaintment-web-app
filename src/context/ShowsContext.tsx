@@ -1,4 +1,4 @@
-import { ReactNode, createContext } from "react";
+import { ReactNode, createContext, useEffect, useState } from "react";
 import data from "../../data/data.json";
 
 interface Type {
@@ -38,9 +38,13 @@ interface ShowProviderProps {
 const ShowsContext = createContext<ShowsContext | null>(null);
 
 function ShowsProvider({ children }: ShowProviderProps) {
-  localStorage.setItem("shows", JSON.stringify(data));
-
-  const shows: ShowDetail[] = JSON.parse(localStorage.getItem("shows") || "{}");
+  const [shows, setShows] = useState(function () {
+    const storedValue =
+      localStorage.getItem("shows") ??
+      localStorage.setItem("shows", JSON.stringify(data)) ??
+      "";
+    return JSON.parse(storedValue) || [];
+  });
 
   function getTrendingShows() {
     const trendingMovies = shows.filter((currData) => currData.isTrending);
@@ -79,8 +83,17 @@ function ShowsProvider({ children }: ShowProviderProps) {
   }
 
   function handleNewBookmark(show: ShowDetail) {
-    console.log(show);
+    show.isBookmarked = !show.isBookmarked;
+    setShows((shows) => [...shows]);
+    localStorage.setItem("shows", JSON.stringify(shows));
   }
+
+  useEffect(
+    function () {
+      localStorage.setItem("shows", JSON.stringify(shows));
+    },
+    [shows]
+  );
 
   return (
     <ShowsContext.Provider
