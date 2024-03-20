@@ -1,6 +1,26 @@
 import { ReactNode, createContext } from "react";
 import data from "../../data/data.json";
-import { useLocalStorage } from "../hooks/UseLocalStorage";
+
+interface Type {
+  small?: string;
+  medium?: string;
+  large: string;
+}
+
+interface Thumbnail {
+  trending?: Type;
+  regular: Type;
+}
+
+interface ShowDetail {
+  title: string;
+  thumbnail: Thumbnail;
+  year: number;
+  category: string;
+  rating: string;
+  isBookmarked: boolean;
+  isTrending: boolean;
+}
 
 interface ShowsContext {
   getTrendingShows: () => any[]; // eslint-disable-line
@@ -8,8 +28,7 @@ interface ShowsContext {
   getMovieShows: () => any[]; // eslint-disable-line
   getTvSeries: () => any[]; // eslint-disable-line
   searchShows: (search: string) => any[]; // eslint-disable-line
-  bookmarked: any; // eslint-disable-line
-  setBookmarked: () => any[]; // eslint-disable-line
+  handleNewBookmark: (show: ShowDetail) => any; // eslint-disable-line
 }
 
 interface ShowProviderProps {
@@ -19,28 +38,32 @@ interface ShowProviderProps {
 const ShowsContext = createContext<ShowsContext | null>(null);
 
 function ShowsProvider({ children }: ShowProviderProps) {
-  const [bookmarked, setBookmarked] = useLocalStorage([], "bookmarked");
+  localStorage.setItem("shows", JSON.stringify(data));
+
+  const shows: ShowDetail[] = JSON.parse(localStorage.getItem("shows") || "{}");
 
   function getTrendingShows() {
-    const trendingMovies = data.filter((currData) => currData.isTrending);
+    const trendingMovies = shows.filter((currData) => currData.isTrending);
 
     return trendingMovies;
   }
 
   function getRegularShows() {
-    const regularShows = data.filter((currData) => !currData.isTrending);
+    const regularShows = shows.filter((currData) => !currData.isTrending);
 
     return regularShows;
   }
 
   function getMovieShows() {
-    const movieShows = data.filter((currData) => currData.category === "Movie");
+    const movieShows = shows.filter(
+      (currData) => currData.category === "Movie"
+    );
 
     return movieShows;
   }
 
   function getTvSeries() {
-    const tvSeries = data.filter(
+    const tvSeries = shows.filter(
       (currData) => currData.category === "TV Series"
     );
 
@@ -48,15 +71,15 @@ function ShowsProvider({ children }: ShowProviderProps) {
   }
 
   function searchShows(search: string = "") {
-    const searchedShows = data.filter((data) =>
+    const searchedShows = shows.filter((data) =>
       data.title.toLowerCase().includes(search.toLowerCase())
     );
 
     return searchedShows;
   }
 
-  function handleNewBookmark(show) {
-    setBookmarked((bookmarked) => [...bookmarked, show]);
+  function handleNewBookmark(show: ShowDetail) {
+    console.log(show);
   }
 
   return (
@@ -67,8 +90,7 @@ function ShowsProvider({ children }: ShowProviderProps) {
         getMovieShows,
         getTvSeries,
         searchShows,
-        bookmarked,
-        setBookmarked,
+        handleNewBookmark,
       }}
     >
       {children}

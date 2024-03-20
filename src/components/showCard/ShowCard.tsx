@@ -1,3 +1,5 @@
+import { useShows } from "../../utilities/UseShows";
+
 interface Type {
   small?: string;
   medium?: string;
@@ -11,11 +13,12 @@ interface Thumbnail {
 
 interface ShowDetail {
   title: string;
+  thumbnail: Thumbnail;
   year: number;
   category: string;
-
-  thumbnail: Thumbnail;
   rating: string;
+  isBookmarked: boolean;
+  isTrending: boolean;
 }
 
 interface ShowDetailProps {
@@ -23,6 +26,8 @@ interface ShowDetailProps {
 }
 
 function ShowCard({ show }: ShowDetailProps) {
+  const { handleNewBookmark } = useShows();
+
   return (
     <div className="relative">
       <div className="relative">
@@ -64,7 +69,7 @@ function ShowCard({ show }: ShowDetailProps) {
 
       <button
         className="grid place-content-center w-8 h-8 absolute top-4 right-4 bg-dark-blue text-white rounded-full transition-all duration-300 hover:bg-white hover:text-darker-blue"
-        onClick={() => console.log("test")}
+        onClick={() => handleNewBookmark(show)}
       >
         <svg xmlns="http://www.w3.org/2000/svg" className="w-3 h-[14px] ">
           <path
