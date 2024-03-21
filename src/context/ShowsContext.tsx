@@ -29,6 +29,7 @@ interface ShowsContext {
   getTvSeries: () => any[]; // eslint-disable-line
   searchShows: (search: string) => any[]; // eslint-disable-line
   handleNewBookmark: (show: ShowDetail) => any; // eslint-disable-line
+  getBookmarked: () => any; // eslint-disable-line
 }
 
 interface ShowProviderProps {
@@ -88,6 +89,12 @@ function ShowsProvider({ children }: ShowProviderProps) {
     localStorage.setItem("shows", JSON.stringify(shows));
   }
 
+  function getBookmarked() {
+    const bookmarkedShows = shows.filter((show) => show.isBookmarked);
+
+    return bookmarkedShows;
+  }
+
   useEffect(
     function () {
       localStorage.setItem("shows", JSON.stringify(shows));
@@ -104,6 +111,7 @@ function ShowsProvider({ children }: ShowProviderProps) {
         getTvSeries,
         searchShows,
         handleNewBookmark,
+        getBookmarked,
       }}
     >
       {children}
