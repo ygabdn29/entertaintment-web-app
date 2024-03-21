@@ -27,7 +27,7 @@ const router = createBrowserRouter(
 function App() {
   return (
     <div className="flex justify-center my-0 mx-auto">
-      <div className="max-w-[90rem] w-full">
+      <div className="max-w-[90rem] w-full md:max-w-3xl">
         <ShowsProvider>
           <RouterProvider router={router}></RouterProvider>
         </ShowsProvider>
