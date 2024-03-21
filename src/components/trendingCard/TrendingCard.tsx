@@ -33,7 +33,7 @@ function TrendingCard({ show }: ShowDetailProps) {
         <img
           src={`${show.thumbnail.trending?.large.slice(2)}`}
           alt=""
-          className="w-full rounded-lg"
+          className="w-full rounded-lg md:w-[470px] md:h-[230px]"
         />
         <div className="absolute grid place-content-center gap-5 w-full h-full top-0 opacity-0 bg-darker-blue/50 transition-all duration-300 hover:opacity-100">
           <button className="flex gap-5 items-center justify-center w-[120px] h-12 text-white bg-white/40 rounded-full ">
