@@ -14,14 +14,14 @@ function Bookmarked() {
   return (
     <div className="mb-16">
       <h2 className="text-white text-3.5xl mb-9">Bookmarked Movies</h2>
-      <div className="grid grid-cols-4 gap-x-10 gap-y-8 mb-10">
+      <div className="grid grid-cols-4 md:grid-cols-3 gap-x-10 md:gap-x-7 gap-y-8 md:gap-y-6 mb-10 md:mb-16">
         {bookmarkedMovies.map((show, i) => (
           <ShowCard show={show} key={i}></ShowCard>
         ))}
       </div>
 
       <h2 className="text-white text-3.5xl mb-9">Bookmarked TV Series</h2>
-      <div className="grid grid-cols-4 gap-x-10 gap-y-8">
+      <div className="grid grid-cols-4 md:grid-cols-3 gap-x-10 md:gap-x-7 gap-y-8 md:gap-y-6">
         {bookmarkedTvSeries.map((show, i) => (
           <ShowCard show={show} key={i}></ShowCard>
         ))}

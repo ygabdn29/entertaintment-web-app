@@ -11,7 +11,7 @@ function SearchResult({ searchTerms }) {
         Search Result for {`"${searchTerms}"`}
       </h2>
 
-      <div className="grid grid-cols-4 gap-x-10 gap-y-8">
+      <div className="grid grid-cols-4 md:grid-cols-3 gap-x-10 md:gap-x-7 gap-y-8 md:gap-y-6">
         {searchResult.map((show) => (
           <ShowCard show={show} key={show.title}></ShowCard>
         ))}
