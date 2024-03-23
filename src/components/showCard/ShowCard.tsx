@@ -50,22 +50,26 @@ function ShowCard({ show }: ShowDetailProps) {
       </div>
 
       <div className="flex gap-1 mb-1">
-        <p className="text-white opacity-75 font-light text-[13px]">
+        <p className="text-white opacity-75 font-light text-[11px] md:text-[13px]">
           {show.year}
         </p>
-        <span className="text-white opacity-75 font-light text-[13px]">·</span>
+        <span className="text-white opacity-75 font-light text-[11px] md:text-[13px]">
+          ·
+        </span>
 
-        <p className="text-white opacity-75 font-light text-[13px]">
+        <p className="text-white opacity-75 font-light text-[11px] md:text-[13px]">
           {show.category}
         </p>
-        <span className="text-white opacity-75 font-light text-[13px]">·</span>
+        <span className="text-white opacity-75 font-light text-[11px] md:text-[13px]">
+          ·
+        </span>
 
-        <p className="text-white opacity-75 font-light text-[13px]">
+        <p className="text-white opacity-75 font-light text-[11px] md:text-[13px]">
           {show.rating}
         </p>
       </div>
 
-      <p className="text-white font-medium text-lg">{show.title}</p>
+      <p className="text-white font-medium text-sm md:text-lg">{show.title}</p>
 
       {/* {show.isBookmarked ? (
         <h2 className="text-white">Bookmark</h2>
@@ -74,7 +78,7 @@ function ShowCard({ show }: ShowDetailProps) {
       )} */}
 
       <button
-        className={`grid place-content-center w-8 h-8 absolute top-4 right-4 bg-dark-blue text-white ${
+        className={`grid place-content-center w-8 h-8 absolute top-2 md:top-4 right-2 md:right-4 bg-dark-blue text-white ${
           show.isBookmarked ? "fill-white" : "fill-none"
         } rounded-full transition-all duration-300 hover:bg-white hover:text-darker-blue`}
         onClick={() => handleNewBookmark(show)}

@@ -4,7 +4,7 @@ function SearchInput({ search, setSearch }) {
   }
 
   return (
-    <div className="flex items-center gap-6 mt-8 mb-[2.125rem]">
+    <div className="flex md:items-center gap-6 mt-6 md:mt-8 mb-6 md:mb-[2.125rem] mx-4">
       <div className="py-3.5">
         <svg xmlns="http://www.w3.org/2000/svg" className="w-8 h-8">
           <path
@@ -20,7 +20,7 @@ function SearchInput({ search, setSearch }) {
         id="searchBar"
         aria-label="Search movies or TV series"
         placeholder="Search for movies or TV Series"
-        className="w-full text-2xl text-white py-3.5 outline-0 border border-t-transparent border-r-transparent border-l-transparent border-b-transparent bg-transparent transition-all duration-300 placeholder: opacity-50 focus:border-b-white"
+        className="w-full text-base md:text-2xl text-white py-3.5 outline-0 border border-t-transparent border-r-transparent border-l-transparent border-b-transparent bg-transparent transition-all duration-300 placeholder: opacity-50 focus:border-b-white"
         onChange={(e) => {
           e.preventDefault();
           handleSearch(e.target.value);

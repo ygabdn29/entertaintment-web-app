@@ -18,6 +18,7 @@ export default {
       gridTemplateColumns: {
         main: "max-content 1fr",
         trending: "repeat(5, 30rem)",
+        trendingMobile: "repeat(5, 15rem)",
       },
       gridTemplateRows: {
         main: "max-content 1fr 1fr",
