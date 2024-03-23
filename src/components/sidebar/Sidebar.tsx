@@ -2,15 +2,15 @@ import { NavLink } from "react-router-dom";
 
 function Sidebar() {
   return (
-    <header className="max-h-240 md:max-h-fit h-240 md:h-full max-w-24 md:max-w-3xl w-full md:w-full">
-      <nav className="flex flex-col md:flex-row items-center md:justify-between h-full bg-dark-blue py-8 px-7 md:p-6 rounded-[20px]">
+    <header className="lg:max-h-240 md:max-h-fit lg:h-240 md:h-full lg:max-w-24 md:max-w-3xl w-full">
+      <nav className="flex lg:flex-col md:flex-row items-center md:justify-between h-full bg-dark-blue lg:py-8 lg:px-7 md:p-6 rounded-[20px]">
         <img
           src="../../src/assets/logo.svg"
           alt="Logo"
-          className="max-w-8 w-full mb-16 md:mb-0"
+          className="max-w-8 w-full lg:mb-16 md:mb-0"
         />
 
-        <ul className="flex flex-col md:flex-row gap-10 md:gap-8 items-center ">
+        <ul className="flex lg:flex-col md:flex-row lg:gap-10 md:gap-8 items-center">
           <li className="text-white">
             <NavLink
               to="home"
@@ -87,7 +87,7 @@ function Sidebar() {
         <img
           src="../../src/assets/image-avatar.png"
           alt="Avatar Image"
-          className="w-10 md:w-8 h-10 md:h-8 rounded-full border border-white mt-auto"
+          className="lg:w-10 md:w-8 lg:h-10 md:h-8 rounded-full border border-white mt-auto"
         />
       </nav>
     </header>

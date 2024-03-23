@@ -26,8 +26,8 @@ export default {
         "3.5xl": ["2rem", "2.375rem"],
       },
       screens: {
-        md: { max: "768px" },
-        sm: { max: "375px" },
+        lg: { min: "1440px" },
+        md: { min: "700px" },
       },
     },
   },

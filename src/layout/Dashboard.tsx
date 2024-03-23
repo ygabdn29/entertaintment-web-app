@@ -8,7 +8,7 @@ function Dashboard() {
   const [search, setSearch] = useState("");
 
   return (
-    <div className="grid grid-cols-main md:grid-cols-1 gap-9 md:gap-0 pl-8 pt-8 pr-9 md:p-6">
+    <div className="grid lg:grid-cols-main md:grid-cols-1 lg:gap-9 md:gap-0 lg:pl-8 lg:pt-8 lg:pr-9 md:p-6">
       <Sidebar></Sidebar>
 
       <main>

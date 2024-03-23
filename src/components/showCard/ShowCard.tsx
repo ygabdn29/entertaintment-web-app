@@ -29,12 +29,12 @@ function ShowCard({ show }: ShowDetailProps) {
   const { handleNewBookmark } = useShows();
 
   return (
-    <div className="relative">
+    <div className="relative lg:w-[17.5rem]">
       <div className="relative">
         <img
           src={`${show.thumbnail.regular.large.slice(2)}`}
           alt=""
-          className="w-[17.5rem] h-[10.875rem] md:h-[8.75rem] rounded-lg mb-2"
+          className="lg:w-[17.5rem] lg:h-[10.875rem] md:h-[8.75rem] rounded-lg mb-2"
         />
 
         <div className="absolute grid place-content-center gap-5 w-full h-full top-0 opacity-0 bg-darker-blue/50 transition-all duration-300 hover:opacity-100">
