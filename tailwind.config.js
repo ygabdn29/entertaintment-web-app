@@ -18,12 +18,17 @@ export default {
       gridTemplateColumns: {
         main: "max-content 1fr",
         trending: "repeat(5, 30rem)",
+        trendingMobile: "repeat(5, 15rem)",
       },
       gridTemplateRows: {
         main: "max-content 1fr 1fr",
       },
       fontSize: {
         "3.5xl": ["2rem", "2.375rem"],
+      },
+      screens: {
+        lg: { min: "1440px" },
+        md: { min: "700px" },
       },
     },
   },
