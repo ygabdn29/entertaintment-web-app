@@ -31,9 +31,9 @@ Users should be able to:
 
 ### Screenshot
 
-[Desktop Screenshots]()
-[Tablet Screenshots]()
-[Phone Screenshots]()
+[Desktop](https://github.com/ygabdn29/entertaintment-web-app/tree/master/screenshots/desktop)
+[Tablet](https://github.com/ygabdn29/entertaintment-web-app/tree/master/screenshots/tablet)
+[Mobile](https://github.com/ygabdn29/entertaintment-web-app/tree/master/screenshots/mobile)
 
 ### Links
 
