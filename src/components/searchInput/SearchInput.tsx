@@ -1,4 +1,10 @@
-function SearchInput({ search, setSearch }) {
+function SearchInput({
+  search,
+  setSearch,
+}: {
+  search: string;
+  setSearch(searchTerms: string): any; //eslint-disable-line
+}) {
   function handleSearch(searchTerms: string) {
     setSearch(searchTerms);
   }

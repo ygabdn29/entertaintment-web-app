@@ -30,6 +30,8 @@ interface ShowsContext {
   searchShows: (search: string) => any[]; // eslint-disable-line
   handleNewBookmark: (show: ShowDetail) => any; // eslint-disable-line
   getBookmarked: () => any; // eslint-disable-line
+  getBookmarkedMovies: () => any; // eslint-disable-line
+  getBookmarkedTvSeries: () => any; // eslint-disable-line
 }
 
 interface ShowProviderProps {
@@ -48,20 +50,20 @@ function ShowsProvider({ children }: ShowProviderProps) {
   });
 
   function getTrendingShows() {
-    const trendingMovies = shows.filter((currData) => currData.isTrending);
+    const trendingMovies = shows.filter((show: ShowDetail) => show.isTrending);
 
     return trendingMovies;
   }
 
   function getRegularShows() {
-    const regularShows = shows.filter((currData) => !currData.isTrending);
+    const regularShows = shows.filter((show: ShowDetail) => !show.isTrending);
 
     return regularShows;
   }
 
   function getMovieShows() {
     const movieShows = shows.filter(
-      (currData) => currData.category === "Movie"
+      (show: ShowDetail) => show.category === "Movie"
     );
 
     return movieShows;
@@ -69,15 +71,15 @@ function ShowsProvider({ children }: ShowProviderProps) {
 
   function getTvSeries() {
     const tvSeries = shows.filter(
-      (currData) => currData.category === "TV Series"
+      (show: ShowDetail) => show.category === "TV Series"
     );
 
     return tvSeries;
   }
 
   function searchShows(search: string = "") {
-    const searchedShows = shows.filter((data) =>
-      data.title.toLowerCase().includes(search.toLowerCase())
+    const searchedShows = shows.filter((show: ShowDetail) =>
+      show.title.toLowerCase().includes(search.toLowerCase())
     );
 
     return searchedShows;
@@ -85,16 +87,33 @@ function ShowsProvider({ children }: ShowProviderProps) {
 
   function handleNewBookmark(show: ShowDetail) {
     show.isBookmarked = !show.isBookmarked;
-    setShows((shows) => [...shows]);
+    setShows((shows: ShowDetail[]) => [...shows]);
     localStorage.setItem("shows", JSON.stringify(shows));
   }
 
   function getBookmarked() {
-    const bookmarkedShows = shows.filter((show) => show.isBookmarked);
+    const bookmarkedShows = shows.filter(
+      (show: ShowDetail) => show.isBookmarked
+    );
 
     return bookmarkedShows;
   }
 
+  function getBookmarkedMovies() {
+    const bookmarkedMovies = shows
+      .filter((show: ShowDetail) => show.isBookmarked)
+      .filter((show: ShowDetail) => show.category === "Movie");
+
+    return bookmarkedMovies;
+  }
+
+  function getBookmarkedTvSeries() {
+    const bookmarkedTvSeries = shows
+      .filter((show: ShowDetail) => show.isBookmarked)
+      .filter((show: ShowDetail) => show.category === "TV Series");
+
+    return bookmarkedTvSeries;
+  }
   useEffect(
     function () {
       localStorage.setItem("shows", JSON.stringify(shows));
@@ -112,6 +131,8 @@ function ShowsProvider({ children }: ShowProviderProps) {
         searchShows,
         handleNewBookmark,
         getBookmarked,
+        getBookmarkedMovies,
+        getBookmarkedTvSeries,
       }}
     >
       {children}

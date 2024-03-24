@@ -13,11 +13,12 @@ interface Thumbnail {
 
 interface ShowDetail {
   title: string;
+  thumbnail: Thumbnail;
   year: number;
   category: string;
-
-  thumbnail: Thumbnail;
   rating: string;
+  isBookmarked: boolean;
+  isTrending: boolean;
 }
 
 interface ShowDetailProps {

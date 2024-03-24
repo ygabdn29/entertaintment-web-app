@@ -1,7 +1,7 @@
 import { useShows } from "../../utilities/UseShows";
 import ShowCard from "../showCard/ShowCard";
 
-function SearchResult({ searchTerms }) {
+function SearchResult({ searchTerms }: { searchTerms: string }) {
   const { searchShows } = useShows();
   const searchResult = searchShows(searchTerms);
 
