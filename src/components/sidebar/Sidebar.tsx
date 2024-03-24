@@ -97,7 +97,7 @@ function Sidebar() {
         </ul>
 
         <img
-          src="../../src/assets/image-avatar.png"
+          src="src\assets\image-avatar.png"
           alt="Avatar Image"
           className="w-7 lg:w-10 md:w-8 h-7 lg:h-10 md:h-8 rounded-full border border-white mt-auto"
         />
