@@ -31,6 +31,8 @@ Users should be able to:
 
 ### Screenshot
 
+![](./screenshots/desktop/desktop-home.png)
+
 [Desktop](https://github.com/ygabdn29/entertaintment-web-app/tree/master/screenshots/desktop)
 [Tablet](https://github.com/ygabdn29/entertaintment-web-app/tree/master/screenshots/tablet)
 [Mobile](https://github.com/ygabdn29/entertaintment-web-app/tree/master/screenshots/mobile)
