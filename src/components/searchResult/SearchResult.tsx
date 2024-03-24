@@ -7,7 +7,7 @@ function SearchResult({ searchTerms }: { searchTerms: string }) {
 
   return (
     <div>
-      <h2 className="text-white text-xl md:text-3.5xl mb-6 md:mb-8 mx-4 md:mx-4">
+      <h2 className="text-white text-xl md:text-3.5xl mb-6 md:mb-8 mx-4 md:mx-0">
         Search Result for {`"${searchTerms}"`}
       </h2>
 

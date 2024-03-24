@@ -26,7 +26,7 @@ function SearchInput({
         id="searchBar"
         aria-label="Search movies or TV series"
         placeholder="Search for movies or TV Series"
-        className="w-full text-base md:text-2xl text-white py-3.5 outline-0 border border-t-transparent border-r-transparent border-l-transparent border-b-transparent bg-transparent transition-all duration-300 placeholder: opacity-50 focus:border-b-white"
+        className="w-full text-white text-base md:text-2xl  py-3.5 outline-0 border border-t-transparent border-r-transparent border-l-transparent border-b-transparent bg-transparent transition-all duration-300 placeholder:opacity-50 focus:border-b-white"
         onChange={(e) => {
           e.preventDefault();
           handleSearch(e.target.value);
