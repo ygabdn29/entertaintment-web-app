@@ -31,7 +31,9 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+[Desktop Screenshots]()
+[Tablet Screenshots]()
+[Phone Screenshots]()
 
 ### Links
 
