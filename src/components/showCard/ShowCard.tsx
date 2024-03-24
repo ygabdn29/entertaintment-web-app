@@ -40,7 +40,7 @@ function ShowCard({ show }: ShowDetailProps) {
         <div className="absolute grid place-content-center gap-5 w-full h-full top-0 opacity-0 bg-darker-blue/50 transition-all duration-300 hover:opacity-100">
           <button className="flex gap-5 items-center justify-center w-[120px] h-12 text-white bg-white/40 rounded-full ">
             <img
-              src="src\assets\icon-play.svg"
+              src=".\assets\icon-play.svg"
               alt=""
               className="h-[30px] w-[30px]"
             />

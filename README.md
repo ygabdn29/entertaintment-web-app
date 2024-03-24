@@ -1,30 +1,67 @@
-# React + TypeScript + Vite
+# Frontend Mentor - Entertainment web app solution
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a solution to the [Entertainment web app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/entertainment-web-app-J-UhgAW1X). Frontend Mentor challenges help you improve your coding skills by building realistic project.
 
-Currently, two official plugins are available:
+## Table of contents
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+  - [Useful resources](#useful-resources)
+- [Author](#author)
 
-## Expanding the ESLint configuration
+## Overview
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### The challenge
 
-- Configure the top-level `parserOptions` property like this:
+Users should be able to:
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+- View the optimal layout for the app depending on their device's screen size
+- See hover states for all interactive elements on the page
+- Navigate between Home, Movies, TV Series, and Bookmarked Shows pages
+- Add/Remove bookmarks from all movies and TV series
+- Search for relevant shows on all pages
+- **Bonus**: Build this project as a full-stack application
+- **Bonus**: If you're building a full-stack app, we provide authentication screen (sign-up/login) designs if you'd like to create an auth flow
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+### Screenshot
+
+![](./screenshot.jpg)
+
+### Links
+
+- Solution URL: (https://github.com/ygabdn29/entertaintment-web-app)
+- Live Site URL: (https://ygabdn29-entertainment-web-app.netlify.app/)
+
+## My process
+
+### Built with
+
+- HTML5
+- Tailwind CSS
+- ReactJS with Typescript
+- CSS Grid
+
+### What I learned
+
+In this project I learned how to use ReactJS with Typescript and Tailwind CSS for styling.
+
+### Continued development
+
+- Making this project as a fullstack app
+- Since this is my first time using TypeScript and Tailwind, I believe there may be ways to refactor my code. However, at this point, I still don't know where I can refactor it.
+
+### Useful resources
+
+- [Tailwind Documentation](https://tailwindcss.com/)
+- [Typescript Tutorial for Beginners](https://youtu.be/d56mG7DezGs?si=EA1VNdQz81D0Rpch)
+
+## Author
+
+- Yoga Budiman
+- Frontend Mentor - [@ygabdn29](https://www.frontendmentor.io/profile/ygabdn29)
