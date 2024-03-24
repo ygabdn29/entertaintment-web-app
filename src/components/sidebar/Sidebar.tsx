@@ -5,7 +5,7 @@ function Sidebar() {
     <header className="lg:max-h-240 md:max-h-fit lg:h-240 md:h-full lg:max-w-24 md:max-w-3xl w-full">
       <nav className="flex lg:flex-col md:flex-row items-center justify-between h-full bg-dark-blue py-[1.125rem] lg:py-8 px-4 lg:px-7 md:p-6 md:rounded-[20px]">
         <img
-          src="src\assets\logo.svg"
+          src="../assets/logo.svg"
           alt="Logo"
           className="max-w-6 md:max-w-8 w-full max-h-5 md:max-h-[1.625rem] h-full lg:mb-16 md:mb-0"
         />
@@ -97,7 +97,7 @@ function Sidebar() {
         </ul>
 
         <img
-          src="src\assets\image-avatar.png"
+          src="assets\image-avatar.png"
           alt="Avatar Image"
           className="w-7 lg:w-10 md:w-8 h-7 lg:h-10 md:h-8 rounded-full border border-white mt-auto"
         />
